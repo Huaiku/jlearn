@@ -35,7 +35,6 @@ public class SpringHuaiku {
 				i++;
 				object.print();
 				Thread.sleep(2000);
-				System.out.println(i);
 			}
 		};
 	}

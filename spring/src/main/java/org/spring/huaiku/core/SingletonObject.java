@@ -3,6 +3,7 @@ package org.spring.huaiku.core;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,13 +13,17 @@ import org.springframework.stereotype.Component;
  * @date Nov 14, 2018-6:22:32 PM
  */
 @Component
-public class SingletonObject {
+public abstract class SingletonObject {
 	private static Logger logger = LoggerFactory.getLogger(SingletonObject.class);
 	
-	@Autowired
-	private PrototypeObject object;
+	//@Autowired
+	//private PrototypeObject object;
 	
 	public void print() {
-		logger.info("the class name ==> {}",object.getClassName());
+		PrototypeObject object = objectSupplier();
+		logger.info("the class name ==> {},Hashcode==>{}",object.getClassName(),object.hashCode());
 	}
+	
+	@Lookup
+	protected abstract PrototypeObject objectSupplier();
 }
