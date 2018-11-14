@@ -1,0 +1,7 @@
+# environments
+spring:
+  output:
+    ansi:
+      enabled: detect
+  profiles:
+    active: dev
