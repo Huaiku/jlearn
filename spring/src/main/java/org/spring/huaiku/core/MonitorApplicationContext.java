@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
  * @Author huaiku
  * @Date 2018年11月14日
  * @description bean register monitor
+ * 应用上下文感知
  */
 @Component
 public class MonitorApplicationContext implements ApplicationContextAware {

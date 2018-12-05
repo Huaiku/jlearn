@@ -2,7 +2,9 @@ package org.spring.huaiku;
 
 import java.util.Arrays;
 
+import org.spring.huaiku.core.BeanAnnotation;
 import org.spring.huaiku.core.MonitorApplicationContext;
+import org.spring.huaiku.core.ParentObject;
 import org.spring.huaiku.core.SingletonObject;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -36,6 +38,15 @@ public class SpringHuaiku {
 				object.print();
 				Thread.sleep(2000);
 			}
+		};
+	}
+	
+	@Bean public CommandLineRunner qualifierTest(final BeanAnnotation object) {
+		return (args) -> {
+			object.print();
+			object.print2();
+			
+			object.say();
 		};
 	}
 }
