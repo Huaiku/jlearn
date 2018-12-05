@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 import org.spring.huaiku.core.BeanAnnotation;
 import org.spring.huaiku.core.MonitorApplicationContext;
-import org.spring.huaiku.core.ParentObject;
 import org.spring.huaiku.core.SingletonObject;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

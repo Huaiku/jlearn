@@ -3,11 +3,13 @@ package org.spring.huaiku.core;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BeanAnnotation {
 	
+	@Lazy(value=true)
 	@Bean
 	public TargetObject targetObject() {
 		return new TargetObject();
