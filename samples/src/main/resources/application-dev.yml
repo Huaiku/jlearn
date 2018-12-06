@@ -1,0 +1,22 @@
+#server:
+#  port: 8089
+#spring:
+#  datasource:
+#    name: mysql_test_db
+#    url: jdbc:mysql://localhost:3306/dm?useSSL=false&serverTimezone=GMT%2B8
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: banboll
+#    password: banboll
+#    platform: mysql
+#    sql-script-encoding: utf-8
+#    initialization-mode: NEVER
+#    continue-on-error: false
+#    separator: ;
+#    dbcp2:
+#      max-wait-millis: 10000
+#      max-total: 20
+#      min-idle: 5
+#      initial-size: 5
+#      validation-query: "SELECT 1"
+#      test-on-borrow: true
+      
