@@ -6,40 +6,34 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.huaiku</groupId>
-		<artifactId>jlearn</artifactId>
+		<artifactId>samples</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>samples</artifactId>
-	<name>samples</name>
+	<artifactId>springaop</artifactId>
+	<name>springaop</name>
 	<url>http://maven.apache.org</url>
-	<packaging>pom</packaging>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<!-- Override Spring Data release train provided by Spring Boot -->
-			<dependency>
-				<groupId>org.springframework.data</groupId>
-				<artifactId>spring-data-releasetrain</artifactId>
-				<version>Fowler-SR2</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>2.1.0.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-
 	<dependencies>
+		<!-- Override Spring Data release train provided by Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-releasetrain</artifactId>
+			<version>Fowler-SR2</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>2.1.0.RELEASE</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -72,9 +66,9 @@
 			<artifactId>log4j-web</artifactId>
 		</dependency>
 	</dependencies>
-	<build>
 
-		<finalName>spring</finalName>
+	<build>
+		<finalName>springaop</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<resources>
 			<resource>
@@ -96,7 +90,4 @@
 			</plugin>
 		</plugins>
 	</build>
-<modules>
-	<module>springaop</module>
-</modules>
 </project>
