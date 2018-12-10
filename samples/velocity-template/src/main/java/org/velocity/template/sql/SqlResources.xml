@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mappers package="org.velocity.template.sql">
+    <mapper namespace="SqlResources">
+        <select id="selectGains">
+			SELECT * FROM wiwj_operational_gains_new;
+		</select>
+        <insert id="insertIntoGains">
+			INSERT INTO 
+				WIWJ_OPERATIONAL_GAINS_NEW
+			VALUES
+			  	(SEQ_OPERATIONAL_CHAJIA.NEXTVAL, ?, ?, ?, ?, ?, ?);
+		</insert>
+    </mapper>
+    <mapper namespace="two"></mapper>
+</mappers>
