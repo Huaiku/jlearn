@@ -96,5 +96,6 @@
 <modules>
 	<module>springaop</module>
     <module>velocity-template</module>
+    <module>web</module>
   </modules>
 </project>

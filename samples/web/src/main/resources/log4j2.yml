@@ -1,0 +1,42 @@
+Configuration:
+  status: info
+  name: XXOO
+  properties:
+    property:
+      name: LOGGING_PATH
+      value: "/datamanager"
+  Appenders:
+    Console:
+    - name: DefaultConsoleAppender
+      target: SYSTEM_OUT
+      PatternLayout: #%clr(${LOG_LEVEL_PATTERN:-%5p})
+        pattern: "%clr{%d}{blue} %clr{%-5level:}-- %clr{[%t .. ]}{magenta} %clr{%C{1.}}{cyan} %clr{%msg}{cyan} %n%clr{%throwable}{red}"
+    File:
+    - name: DefaultFileAppender
+      fileName: ${LOGGING_PATH}/xy-datamanagement-info.log
+      patternLayout: 
+        pattern: "%d %p %C{1.} [%t] %m%n"
+      Filters:
+        ThresholdFilter:
+          level: info
+    - name: ErrorFileAppender
+      fileName: ${LOGGING_PATH}/xy-datamanagement-error.log
+      patternLayout:
+        pattern: "%d %p %C{1.} [%t] %m%n"
+      Filters:
+        ThresholdFilter:
+          level: warn
+  Loggers:
+    Root: 
+      level: info
+      AppenderRef: 
+      - ref: DefaultConsoleAppender
+      - ref: DefaultFileAppender
+      - ref: ErrorFileAppender
+#    Logger:
+#    - name: com.datamanagement.* # 用于一个特定包，需要特定文件日志时
+#      level: error
+#      additivity: false
+#      AppenderRef:
+#        ref: ErrorFileAppender
+      
