@@ -1,5 +1,5 @@
 server:
-  port: 8089
+  port: 7777
 #spring:
 #  datasource:
 #    name: mysql_test_db
